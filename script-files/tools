@@ -1,0 +1,18 @@
+#preload all aliases
+#set -a to automatically export all functions
+set -a
+
+NanoPlot() { singularity exec ${SINGULARITYdir}MARVEL.app NanoPlot "$@" ; }
+filtlong(){ singularity exec ${SINGULARITYdir}MARVEL.app filtlong "$@" ; }
+parallel(){ singularity exec ${SINGULARITYdir}MARVEL.app parallel "$@" ; }
+minimap2() { singularity exec ${SINGULARITYdir}minimap2.app minimap2 "$@" ;}
+yacrd() { singularity exec ${SINGULARITYdir}yacrd.app /install/yacrd/bin/yacrd "$@" ;}
+
+seqkit() { singularity exec ${SINGULARITYdir}basicTools.app seqkit "$@" ; }
+mawk() { singularity exec ${SINGULARITYdir}basicTools.app mawk "$@" ; }
+samtools() { singularity exec ${SINGULARITYdir}basicTools.app samtools "$@" ; }
+bedGraphToBigWig() { singularity exec ${SINGULARITYdir}basicTools.app bedGraphToBigWig "$@" ; }
+bedtools() { singularity exec ${SINGULARITYdir}basicTools.app bedtools "$@" ; }
+
+shasta() { singularity exec ${SINGULARITYdir}shasta.app shasta "$@" ; }
+set +a
